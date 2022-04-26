@@ -1,5 +1,3 @@
-## Oneiro Engine
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74720936/164480358-22f89315-fe38-46ba-a808-ddbcd1f8565c.png" width="350" height="400">
 </p>
@@ -26,15 +24,18 @@ public:
         oe::log::get("log")->info("Initializing...");
         return true;
     }
+    
     bool Update() override
     {
         // Update logic
         return true;
     }
+    
     void Shutdown() override
     {
         oe::log::get("log")->info("Closing...");
     }
+    
     void HandleKey(oe::Input::Key key, oe::Input::Action action) override
     {
         using namespace oe;
@@ -48,6 +49,7 @@ public:
             }
         }
     }
+    
     void HandleButton(oe::Input::Button button, oe::Input::Action action) override
     {
         using namespace oe;
@@ -64,6 +66,7 @@ public:
         }
     }
 };
+
 namespace oe::Runtime
 {
     std::shared_ptr<Application> CreateApplication(int argc, char* argv[])
