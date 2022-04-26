@@ -1,37 +1,74 @@
-## Welcome to GitHub Pages
+## Oneiro Engine
 
-You can use the [editor on GitHub](https://github.com/DezlowNG/Oneiro/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74720936/164480358-22f89315-fe38-46ba-a808-ddbcd1f8565c.png" width="350" height="400">
+</p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p align="center">Oneiro Engine — powerful, fast and free engine for visual novels.</p>
 
-### Markdown
+### Why Oneiro?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Oneiro is powerful and fast engine, because it's written in C++ and Vulkan API. For visual novel scripts Oneiro uses lua scripting language, because it's simple and fast language.
 
-```markdown
-Syntax highlighted code block
+**Currently, Oneiro Engine doen't have all features, because it's under development.**
 
-# Header 1
-## Header 2
-### Header 3
+[Main github repository](https://github.com/OneiroGames/Oneiro)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Example:
+```cpp
+#include "Oneiro/Core/Logger.hpp"
+#include "Oneiro/Runtime/Application.hpp"
+class SandBoxApp final : public oe::Runtime::Application
+{
+public:
+    bool Init() override
+    {
+        oe::log::get("log")->info("Initializing...");
+        return true;
+    }
+    bool Update() override
+    {
+        // Update logic
+        return true;
+    }
+    void Shutdown() override
+    {
+        oe::log::get("log")->info("Closing...");
+    }
+    void HandleKey(oe::Input::Key key, oe::Input::Action action) override
+    {
+        using namespace oe;
+        if (action == Input::Action::PRESS)
+        {
+            switch (key)
+            {
+            case Input::Key::ESC:
+                Stop(); break;
+            default: break;
+            }
+        }
+    }
+    void HandleButton(oe::Input::Button button, oe::Input::Action action) override
+    {
+        using namespace oe;
+        if (action == Input::Action::PRESS)
+        {
+            switch (button)
+            {
+            case Input::Button::LEFT:
+                log::get("log")->info("Press left button!");
+                break;
+            default:
+                break;
+            }
+        }
+    }
+};
+namespace oe::Runtime
+{
+    std::shared_ptr<Application> CreateApplication(int argc, char* argv[])
+    {
+        return std::make_shared<SandBoxApp>();
+    }
+}
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DezlowNG/Oneiro/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
