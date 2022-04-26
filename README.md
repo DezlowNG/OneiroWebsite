@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/74720936/164480358-22f89315-fe38-46ba-a808-ddbcd1f8565c.png" width="350" height="400">
 </p>
 
-<p align="center">Oneiro Engine — powerful, fast and free engine for visual novels.</p>
+<h1 align="center">Oneiro Engine — powerful, fast and free engine for visual novels.</h1>
 
 ### Why Oneiro?
 
