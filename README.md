@@ -26,13 +26,4 @@ Oneiro is powerful and fast engine, because it's written in C++ with OpenGL back
 - [Lead Software Engineer](https://github.com/DezlowNG) — Nikita Gordeev
 - [Software Engineer](https://github.com/Kernstall) — Roma
 
-## Special Thanks
-
-<div align="center">
-  <a href="https://jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width="150" height="150" hspace="5"vspace="5"></a>
-  <a href="https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw"><img src="https://avatars.githubusercontent.com/u/1475290?v=4" width="150" height="150" hspace="5"vspace="5"></a>
-</div>
-
-#
-
 <h1 align="center">Made with ❤️</h1>
