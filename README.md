@@ -8,7 +8,7 @@
 
 Oneiro is powerful and fast engine, because it's written in C++ with OpenGL backend (and Vulkan in future). With Oneiro Engine you can create your visual novel in Luau scripting language which is simple and fast, than other scripting languages.
 
-**Currently, Oneiro Engine doen't have all features, because it's under development.**
+**Currently, Oneiro Engine doesn't have all features, because it's under development.**
 
 ## Get started
 1. Clone repository: ```git clone https://github.com/OneiroGames/Oneiro.git --recursive```
